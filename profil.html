@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gemeinde-App – Mein Profil</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Unsere Gemeinde</h1>
+    <nav>
+      <a href="index.html">Mitteilungen</a>
+      <a href="neu.html" id="nav-neu" class="versteckt">Neue Mitteilung</a>
+      <a href="profil.html" class="aktiv">Mein Profil</a>
+      <a href="#" id="abmelden" class="rechts">Abmelden</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Mein Profil</h2>
+    <form id="profil">
+      <label for="name">Name</label>
+      <input type="text" id="name" required>
+
+      <label for="email">E-Mail (Anmeldung)</label>
+      <input type="email" id="email" disabled>
+
+      <label for="telefon">Telefon (optional)</label>
+      <input type="tel" id="telefon">
+
+      <label for="gruppe">Meine Gruppe</label>
+      <select id="gruppe">
+        <option>Keine Angabe</option>
+        <option>Hauskreis</option>
+        <option>Jugend</option>
+        <option>Chor</option>
+      </select>
+
+      <button type="submit">Profil speichern</button>
+      <p id="bestaetigung"></p>
+    </form>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.4/dist/umd/supabase.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

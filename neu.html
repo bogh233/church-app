@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gemeinde-App – Neue Mitteilung</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Unsere Gemeinde</h1>
+    <nav>
+      <a href="index.html">Mitteilungen</a>
+      <a href="neu.html" id="nav-neu" class="aktiv versteckt">Neue Mitteilung</a>
+      <a href="profil.html">Mein Profil</a>
+      <a href="#" id="abmelden" class="rechts">Abmelden</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Neue Mitteilung</h2>
+    <form id="neue-mitteilung">
+      <label for="titel">Titel</label>
+      <input type="text" id="titel" required>
+
+      <label for="text">Text</label>
+      <textarea id="text" rows="5" required></textarea>
+
+      <label class="haken">
+        <input type="checkbox" id="wichtig">
+        Wichtig (wird hervorgehoben)
+      </label>
+
+      <button type="submit">Mitteilung veröffentlichen</button>
+    </form>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.4/dist/umd/supabase.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

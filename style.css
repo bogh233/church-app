@@ -1,0 +1,111 @@
+/* Farben zentral festlegen – hier kannst du das Aussehen leicht ändern */
+:root {
+  --nacht: #1d2b4f;
+  --licht: #e0a82e;
+  --papier: #f7f8fb;
+  --text: #1b1f2a;
+  --rand: #d5d9e4;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--papier);
+}
+
+header {
+  background: var(--nacht);
+  color: #fff;
+  padding: 1.5rem 1rem 1rem;
+}
+header h1 {
+  margin: 0 0 .75rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+nav { display: flex; gap: 1.25rem; }
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding-bottom: .25rem;
+  border-bottom: 3px solid transparent;
+}
+nav a.aktiv { border-bottom-color: var(--licht); }
+
+main { max-width: 40rem; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+h2 { font-family: Georgia, serif; font-size: 1.3rem; margin-top: 0; }
+
+/* Mitteilungen */
+.mitteilung {
+  background: #fff;
+  border: 1px solid var(--rand);
+  border-radius: 6px;
+  padding: .9rem 1rem;
+  margin-bottom: 1rem;
+}
+.mitteilung h3 { margin: 0 0 .25rem; font-size: 1.05rem; }
+.mitteilung p { margin: 0; }
+.mitteilung time { font-size: .85rem; color: #5b6275; }
+/* Wichtige Mitteilungen fallen durch den gelben Balken auf */
+.mitteilung.wichtig { border-left: 6px solid var(--licht); }
+
+/* Formular */
+label { display: block; font-weight: 600; margin-top: 1rem; }
+input, select, textarea {
+  width: 100%;
+  padding: .6rem;
+  margin-top: .25rem;
+  font: inherit;
+  border: 1px solid var(--rand);
+  border-radius: 6px;
+  background: #fff;
+}
+input:focus, select:focus, textarea:focus, button:focus-visible {
+  outline: 3px solid var(--licht);
+  outline-offset: 1px;
+}
+button {
+  margin-top: 1.5rem;
+  padding: .75rem 1.25rem;
+  font: inherit;
+  font-weight: 600;
+  color: #fff;
+  background: var(--nacht);
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#bestaetigung { margin-top: 1rem; font-weight: 600; }
+
+/* Neue Mitteilung */
+textarea { resize: vertical; }
+label.haken { display: flex; align-items: center; gap: .6rem; font-weight: 400; }
+label.haken input { width: auto; margin: 0; }
+
+/* Löschen-Knopf in der Mitteilung */
+.mitteilung { position: relative; }
+button.loeschen {
+  margin-top: .6rem;
+  padding: .3rem .7rem;
+  font-size: .85rem;
+  font-weight: 400;
+  color: var(--nacht);
+  background: transparent;
+  border: 1px solid var(--rand);
+}
+
+/* Anmeldung und Navigation */
+.versteckt { display: none; }
+nav a.rechts { margin-left: auto; }
+button.zweit {
+  margin-left: .5rem;
+  color: var(--nacht);
+  background: transparent;
+  border: 1px solid var(--nacht);
+}
+#meldung { margin-top: 1rem; font-weight: 600; }
